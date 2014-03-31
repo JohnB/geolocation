@@ -16,6 +16,14 @@ Geolocation.getInstance = function() {
     return geoInstance;
 };
 
+Geolocation.prototype.track = function() {
+    var self = this;
+    navigator.geolocation.watchPosition(function (pos) {
+        self.lat = pos.coords.latitude;
+        self.lon = pos.coords.longitude;
+    });
+};
+
 Geolocation.prototype.localize = function() {
     var self = this;
     if (!navigator.geolocation) {
