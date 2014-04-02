@@ -1,8 +1,8 @@
 {
     "name": "Geolocation",
-    "description": "A package that provides a geolocation object",
-    "homepage": "https://github.com/hculap/geolocation",
-    "author": "Szymon Paluch <hculap@gmail.com>",
+    "description": "A package that provides a geolocation tracking object",
+    "homepage": "https://github.com/johnb/geolocation",
+    "author": "John Baylor <john.baylor@gmail.com>",
     "version": "0.1.1",
     "git": "https://github.com/johnb/geolocation.git",
     "packages": {}

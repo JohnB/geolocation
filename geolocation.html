@@ -1,0 +1,8 @@
+<template name="geolocationTrackingPermission">
+    {{#if geoLocationTrackingAllowed }}
+        <!-- Nothing to do, since they already logged in -->
+        Refresh the page to turn off tracking
+    {{else}}
+        <button class="btn geolocationtrackingpermissiongranted">Click here to use your location</button>
+    {{/if}}
+</template>

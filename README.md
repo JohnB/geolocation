@@ -1,41 +1,32 @@
-<h2>Geolocation - Meteor Smart Package</h2>
+<h2>GeolocationTracking - Meteor Smart Package</h2>
 
-A package that provides geolocation object for meteor.
+A package that provides geolocation tracking for meteor.
 <h3>Installation</h3>
 Just use your meteorite and type:
 
-`mrt add Geolocation`
+`mrt add GeolocationTracking`
 
-You can use it in your non-meteor projects, just copy geoocation.js file.
+<h3>Usage</h3>
 
-<h3>How to use?</h3>
+To get the user's permission to track them:
 
-Firs create geolocation object (Geolocation class is singleton!):
-
-```javascript
-var geo = Geolcation.getInstance();
+```html
+  {{> geolocationTrackingPermission}}
 ```
 
 To access latitude and longitude use:
 
-```javascript
-var latitude = geo.lat;
-var longitude = geo.lng;
-```
-
-If there are some errors you can find them in error field:
-```javascript
-geo.error;
-```
-
-To get new geolocattion coordinates just type:
-
-```javascript
-geo.localize();
+```html
+  {{#if geoLocationTrackingAllowed}}
+    <ul>
+      <li>Latitude: {{geoLocationTrackingLatitude}}</li>
+      <li>Longitude: {{geoLocationTrackingLongitude}}</li>
+    </ul>
+  {{/if}}
 ```
 
 !Remember not all browsers supports geolocation!
 
 <h3>License</h3>
 
-Geollocation is licensed under the MIT license.
+GeolocationTracking is licensed under the MIT license.
